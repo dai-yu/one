@@ -1,0 +1,55 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class='selection'>
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+<view class="selection">
+<video class='video1' src='http://cdn2.polaroidchina.com:8091/20180117/1Jmb59nx/index.m3u8'></video>
+</view>
+
+  <view class="selection">
+    <view class='header'>
+      <text>精品推荐</text>
+      <text class='text-all'>全部精品</text>
+    </view>
+    <view class='content'>
+      <view class='content-item' wx:for="{{contentItems}}">
+        <image src='{{item}}' bindtap='im' data-src='{{item}}'></image>
+        <view class='content-item-text'>
+          <text>这里是标题</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="selection">
+    <view class='header'>
+      <text>热门评测</text>
+      <text class='text-all'>全部评测</text>
+    </view>
+
+    <view class="list-item" wx:for="{{listImage}}">
+      <view class='list-item-image'>
+        <image src='{{item}}' class='list-item-image1'></image>
+        <image src='{{item}}' class='avatar'></image>
+      </view>
+      <view class='list-item-text'>
+        <view class='list-item-text-title'>
+          <text>标题</text>
+        </view>
+
+        <view class='list-item-text-content'>
+          <text>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
